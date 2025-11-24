@@ -6,10 +6,6 @@ on:
   push:
     branches: [ master ]
 
-permissions:
-  contents: read
-  packages: write
-  
 # 2. JOBS (Tareas)
 # Definimos los "trabajos" que se van a ejecutar
 jobs:
@@ -40,7 +36,8 @@ jobs:
           push: true # ¡Importante! Le decimos que suba la imagen
           # Esta es la etiqueta (tag) que Render espera:
           # ghcr.io/tu-usuario/tu-repo/mi-servidor-web:latest
-          tags: ghcr.io/<OWNER>/mi-servidor-web:latest 
+          tags: ghcr.io/Jtorfau172/mi-servidor-web:latest
+
 
   #--- JOB 2: DEPLOY (CD) ---
   deploy:
